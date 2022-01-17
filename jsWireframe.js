@@ -19,7 +19,7 @@ window.onload = function () {
     let appid = "804e94c01bf121b61d8a288389c833e7"; // get weather for berlin
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&units=metric&appid=` +
+        `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&units=metric&appid=` +
           appid
       )
       .then(function (response) {
