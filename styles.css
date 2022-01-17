@@ -1,0 +1,136 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  height: 1000px;
+}
+.container {
+  border: 10px solid #885df1;
+  margin: auto;
+  display: block;
+  border-radius: 200px;
+  padding: 20px;
+  width: 1000px;
+  height: 500px;
+  margin-top: 50px;
+
+  position: relative;
+  background-color: rgba(255, 245, 104, 0.7);
+  border: solid 5px #ffd95a;
+  box-shadow: rgba(0, 0, 0, 0.603) 0px 10px 8px 0px;
+  max-width: 1000px;
+  max-height: 600px;
+}
+.city-display {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+.row {
+  max-width: 800px;
+  margin: auto;
+  align-items: center;
+}
+.weekforecast {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  background-color: rgba(255, 245, 104, 0.7);
+  border: solid 5px #ffd95a;
+  border-radius: 150px;
+  text-align: center;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.603) 0px 10px 8px 0px;
+  width: 800px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.details {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  background-color: rgba(255, 245, 104, 0.7);
+  border: solid 5px #ffd95a;
+  border-radius: 100px;
+  text-align: left;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.603) 0px 10px 8px 0px;
+  width: 300px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+input.form-control {
+  border: solid 2px #ffd95a;
+  box-shadow: rgba(0, 0, 0, 0.603) 0px 10px 8px 0px;
+}
+
+button {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.603) 0px 10px 8px 0px;
+  border: solid 1px #ffd95a;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+button#search {
+  padding: 2% 30%;
+
+  background-color: #ffd95a;
+  color: #fff;
+}
+button#search:hover {
+  background-color: #fff;
+  border: 2px #ffd95a;
+  color: #ffd95a;
+}
+button#currentLocation {
+  padding: 2% 15%;
+  display: left;
+  background-color: #ffd95a;
+  color: #fff;
+  border: 2px #ffd95a;
+}
+button.currentLocation:hover {
+  background-color: #fff;
+  border: 2px #ffd95a;
+  color: #ffd95a;
+}
+
+h1.cityDisplay,
+h1.currentTemp {
+  font-weight: bolder;
+  font-size: 40px;
+}
+h1.currentTemp {
+  font-size: 50px;
+  word-spacing: 50px;
+}
+
+span.units {
+  font-size: 24px;
+  position: relative;
+  top: -20px;
+  word-spacing: 0;
+  font-weight: bold;
+}
+.dateTime {
+  position: relative;
+  top: 20px;
+  left: 70px;
+}
+ul {
+  list-style-type: none;
+}
+.currentWeatherIcon {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 10px;
+  font-size: 50px;
+}
