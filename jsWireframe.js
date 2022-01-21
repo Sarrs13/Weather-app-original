@@ -77,10 +77,12 @@ function currentCityDisplay(position) {
 
       currentTemp.innerHTML = temperature;
     });
+
+  function showFarenheitTemp(event) {
+    event.preventDefault();
+    alert("Link clicked");
+  }
 }
-function showFarenheitTemperature(event) {
-  event.preventDefault();
-  alert("Link clicked");
-}
+
 let fahrenheitLink = document.querySelector("#changeUnit");
-fahrenheitLink.addEventListener("click", showFarenheitTemperature);
+fahrenheitLink.addEventListener("click", showFarenheitTemp);
