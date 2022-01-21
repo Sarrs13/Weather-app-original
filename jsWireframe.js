@@ -44,7 +44,6 @@ window.onload = function () {
   currentLocationButton.addEventListener("click", getPosition);
 
   inputCity.addEventListener("keypress", (event) => {
-    event.preventDefault();
     if (event.keyCode == 13) button.click();
   });
 
