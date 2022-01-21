@@ -34,7 +34,7 @@ window.onload = function () {
         currentCity.innerHTML = cityName + ", " + countryName;
 
         currentTemp.innerHTML = temperature;
-        windSpeed.innerHTML = windSpeedValue;
+        windSpeed.innerHTML = windSpeedValue + "km/h";
       })
       .catch(function (error) {
         console.log(error);
@@ -50,27 +50,37 @@ window.onload = function () {
     if (event.keyCode == 13) button.click();
   });
 
-  function getPosition() {
-    let currentPosition =
-      navigator.geolocation.getCurrentPosition(currentCityDisplay);
-    console.log(currentPosition);
-  }
-  function currentCityDisplay(position) {
-    let appid = "804e94c01bf121b61d8a288389c833e7"; // get weather for berlin
-    console.log(position);
-    axios
-      .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=` +
-          appid
-      )
-      .then(function (response) {
-        let temperature = Math.round(response.data.main.temp);
-        let cityName = response.data.name;
-
-        let countryName = response.data.sys.country;
-        currentCity.innerHTML = cityName + ", " + countryName;
-
-        currentTemp.innerHTML = temperature;
-      });
-  }
+  //function temperatureConverter(currentTemp) {
+  // valNum = parseFloat(currentTemp);
+  // document.getElementById("outputFahrenheit").innerHTML = currentTemp * 1.8 + 32;
 };
+
+function getPosition() {
+  let currentPosition =
+    navigator.geolocation.getCurrentPosition(currentCityDisplay);
+  console.log(currentPosition);
+}
+function currentCityDisplay(position) {
+  let appid = "804e94c01bf121b61d8a288389c833e7"; // get weather for berlin
+  console.log(position);
+  axios
+    .get(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=` +
+        appid
+    )
+    .then(function (response) {
+      let temperature = Math.round(response.data.main.temp);
+      let cityName = response.data.name;
+
+      let countryName = response.data.sys.country;
+      currentCity.innerHTML = cityName + ", " + countryName;
+
+      currentTemp.innerHTML = temperature;
+    });
+}
+function displayFarenheitTemperature(event) {
+  event.preventDefault();
+  alert("Link clicked");
+}
+let fahrenheitLink = document.querySelector("#changeUnit");
+fahrenheitLink.addEventListener("click", showFarenheitTemperature);
