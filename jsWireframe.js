@@ -82,7 +82,7 @@ function currentCityDisplay(position) {
     event.preventDefault();
     alert("Link clicked");
   }
-}
 
-let fahrenheitLink = document.querySelector("#changeUnit");
-fahrenheitLink.addEventListener("click", showFarenheitTemp);
+  let fahrenheitLink = document.querySelector("#changeUnit");
+  fahrenheitLink.addEventListener("click", showFarenheitTemp);
+}
