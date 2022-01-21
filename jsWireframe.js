@@ -78,7 +78,7 @@ function currentCityDisplay(position) {
       currentTemp.innerHTML = temperature;
     });
 }
-function displayFarenheitTemperature(event) {
+function showFarenheitTemperature(event) {
   event.preventDefault();
   alert("Link clicked");
 }
