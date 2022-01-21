@@ -43,6 +43,11 @@ window.onload = function () {
   let currentLocationButton = document.querySelector("#currentLocation");
   currentLocationButton.addEventListener("click", getPosition);
 
+  inputCity.addEventListener("keypress", (event) => {
+    event.preventDefault();
+    if (event.keyCode == 13) button.click();
+  });
+
   function getPosition() {
     let currentPosition =
       navigator.geolocation.getCurrentPosition(currentCityDisplay);
