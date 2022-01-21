@@ -11,6 +11,7 @@ window.onload = function () {
   let inputCity = document.querySelector("#inputCity");
   let currentCity = document.querySelector("#currentCity");
   let currentTemp = document.querySelector("#currentTemp");
+  let windSpeed = document.querySelector("#windSpeed");
   function cityDisplay(event) {
     event.preventDefault();
 
@@ -27,13 +28,13 @@ window.onload = function () {
         let weatherDiv = document.querySelector("#weather");
         let temperature = Math.round(response.data.main.temp);
         let cityName = response.data.name;
-        let windSpeed = response.data.wind.speed;
+        let windSpeedValue = response.data.wind.speed;
 
         let countryName = response.data.sys.country;
         currentCity.innerHTML = cityName + ", " + countryName;
 
         currentTemp.innerHTML = temperature;
-        windSpeed.innerHTML = windSpeed;
+        windSpeed.innerHTML = windSpeedValue;
       })
       .catch(function (error) {
         console.log(error);
