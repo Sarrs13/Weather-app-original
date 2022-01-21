@@ -27,11 +27,13 @@ window.onload = function () {
         let weatherDiv = document.querySelector("#weather");
         let temperature = Math.round(response.data.main.temp);
         let cityName = response.data.name;
+        let windSpeed = response.data.wind.speed;
 
         let countryName = response.data.sys.country;
         currentCity.innerHTML = cityName + ", " + countryName;
 
         currentTemp.innerHTML = temperature;
+        windSpeed.innerHTML = windSpeed;
       })
       .catch(function (error) {
         console.log(error);
