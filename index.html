@@ -24,11 +24,16 @@
        <p class="dateTime" id="dateTime"></p>
           <div class="row align-items-center currentWeather">
             <h1 class="col-4 cityDisplay" id="currentCity">Bern, Switzerland</h1>
-            <h1 class="col-4 currentTemp"><span id="currentTemp">-1</span><span class="units">°C | <a href="#" id="changeUnit">°F</a></span><i class="fas fa-cloud-sun weatherIcon cloudy currentWeatherIcon"></i></h1>
-            
+            <h1 class="col-4 currentTemp">
+              <span id="currentTemp">-1</span>
+              <span class="units">°C | <a href="#" id="changeUnit">°F</a></span> 
+              <img id=icon src="http://openweathermap.org/img/wn/10d@2x.png"> 
+          </h1>
+
+        
             <h3 class="col-4">
               <ul class="details align-items-center">
-              <li>Mostly Cloudy</li>
+              <li id=weatherDescription> Mostly Cloudy </li>
               <li>Wind Speed <span id="windSpeed"></span></li>
               <li>High 3<span id="smallUnits">°C</span> | -2<span class="smallUnits">°C</span> Low</li>
               </ul>

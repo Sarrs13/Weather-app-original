@@ -12,6 +12,7 @@ window.onload = function () {
   let currentCity = document.querySelector("#currentCity");
   let currentTemp = document.querySelector("#currentTemp");
   let windSpeed = document.querySelector("#windSpeed");
+  let weatherDescription = document.querySelector("#weatherDescription");
   function cityDisplay(event) {
     event.preventDefault();
 
@@ -29,12 +30,14 @@ window.onload = function () {
         let temperature = Math.round(response.data.main.temp);
         let cityName = response.data.name;
         let windSpeedValue = response.data.wind.speed;
+        let weatherDescriptionValue = response.data.weather[0].description;
 
         let countryName = response.data.sys.country;
         currentCity.innerHTML = cityName + ", " + countryName;
 
         currentTemp.innerHTML = temperature;
         windSpeed.innerHTML = windSpeedValue + "km/h";
+        weatherDescription.innerHTML = weatherDescriptionValue;
       })
       .catch(function (error) {
         console.log(error);
@@ -43,16 +46,15 @@ window.onload = function () {
   let button = document.querySelector("#search");
   button.addEventListener("click", cityDisplay);
 
+  let fahrenheitLink = document.querySelector("#changeUnit");
+  fahrenheitLink.addEventListener("click", showFarTemp);
+
   let currentLocationButton = document.querySelector("#currentLocation");
   currentLocationButton.addEventListener("click", getPosition);
 
   inputCity.addEventListener("keypress", (event) => {
     if (event.keyCode == 13) button.click();
   });
-
-  //function temperatureConverter(currentTemp) {
-  // valNum = parseFloat(currentTemp);
-  // document.getElementById("outputFahrenheit").innerHTML = currentTemp * 1.8 + 32;
 };
 
 function getPosition() {
@@ -60,6 +62,7 @@ function getPosition() {
     navigator.geolocation.getCurrentPosition(currentCityDisplay);
   console.log(currentPosition);
 }
+
 function currentCityDisplay(position) {
   let appid = "804e94c01bf121b61d8a288389c833e7"; // get weather for berlin
   console.log(position);
@@ -77,12 +80,12 @@ function currentCityDisplay(position) {
 
       currentTemp.innerHTML = temperature;
     });
+}
 
-  function showFarenheitTemp(event) {
-    event.preventDefault();
-    alert("Link clicked");
-  }
-
-  let fahrenheitLink = document.querySelector("#changeUnit");
-  fahrenheitLink.addEventListener("click", showFarenheitTemp);
+function showFarTemp(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#currentTemp");
+  // let temperatureElement = document.querySelector("#");
+  let changeUnit = Math.round((currentTemp.innerHTML * 9) / 5 + 32);
+  currentTemp.innerHTML = changeUnit;
 }

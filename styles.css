@@ -112,6 +112,12 @@ h1.currentTemp {
   font-size: 50px;
   word-spacing: 50px;
 }
+#icon {
+  position: relative;
+  margin-left: 100px;
+  padding-left: 10px;
+  font-size: 50px;
+}
 
 span.units {
   font-size: 24px;
@@ -127,10 +133,4 @@ span.units {
 }
 ul {
   list-style-type: none;
-}
-.currentWeatherIcon {
-  position: relative;
-  margin-left: 10px;
-  padding-left: 10px;
-  font-size: 50px;
 }
