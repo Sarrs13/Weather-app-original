@@ -6,7 +6,7 @@ body {
   );
   height: 1000px;
 }
-.container {
+.topDiv {
   border: 10px solid #885df1;
   margin: auto;
   display: block;
@@ -24,14 +24,21 @@ body {
   max-height: 600px;
 }
 .city-display {
+  padding-left: 20px;
   position: relative;
   top: 50px;
   left: 50px;
 }
 .row {
   max-width: 800px;
-  margin: auto;
+  /* margin: auto; */
   align-items: center;
+}
+.topGrid {
+  padding-left: 20px;
+}
+.center {
+  margin: auto;
 }
 .weekforecast {
   display: block;
@@ -110,13 +117,11 @@ h1.currentTemp {
 }
 h1.currentTemp {
   font-size: 50px;
-  word-spacing: 50px;
 }
 #icon {
   position: relative;
-  margin-left: 100px;
-  padding-left: 10px;
   font-size: 50px;
+  padding: 0px;
 }
 
 span.units {

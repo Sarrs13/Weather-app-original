@@ -18,25 +18,42 @@
     <script src="./jsWireframe.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container topDiv">
     
 
        <p class="dateTime" id="dateTime"></p>
-          <div class="row align-items-center currentWeather">
-            <h1 class="col-4 cityDisplay" id="currentCity">Bern, Switzerland</h1>
-            <h1 class="col-4 currentTemp">
+       <div class="container">
+        <div class="row topGrid">
+          <div class="col-4">
+                        <h1 class="col-4 cityDisplay" id="currentCity">Bern, Switzerland</h1>
+          </div>
+          <div class="col-3">
+            <h1 class="currentTemp">
               <span id="currentTemp">-1</span>
-              <span class="units">°C | <a href="#" id="changeUnit">°F</a></span> 
-              <img id=icon src="http://openweathermap.org/img/wn/10d@2x.png"> 
-          </h1>
-
-        
-            <h3 class="col-4">
+              <span class="units">°C | <a href="#" id="changeUnit">°F</a></span>       
+            </h1>
+          </div>
+          <div class="col-2">
+            <img id=icon src="http://openweathermap.org/img/wn/10d@2x.png">
+          </div>
+          <div class="col-3">
+            <h3>
               <ul class="details align-items-center">
               <li id=weatherDescription> Mostly Cloudy </li>
               <li>Wind Speed <span id="windSpeed"></span></li>
               <li>High 3<span id="smallUnits">°C</span> | -2<span class="smallUnits">°C</span> Low</li>
               </ul>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+          <div class="row align-items-center currentWeather">
+
+            
+            
+        
+            
     </div>
     <div class="weekforecast"> 
         <div class="row">
@@ -85,7 +102,7 @@
 
 <div>
 
-    <div class="row topRow align-items-center">
+    <div class="row center">
             <div class="col-6">
     <input
                 type="text"

@@ -13,6 +13,7 @@ window.onload = function () {
   let currentTemp = document.querySelector("#currentTemp");
   let windSpeed = document.querySelector("#windSpeed");
   let weatherDescription = document.querySelector("#weatherDescription");
+  let icon = document.querySelector("#icon");
   function cityDisplay(event) {
     event.preventDefault();
 
@@ -31,6 +32,8 @@ window.onload = function () {
         let cityName = response.data.name;
         let windSpeedValue = response.data.wind.speed;
         let weatherDescriptionValue = response.data.weather[0].description;
+        let iconCode = response.data.weather[0].icon;
+        let iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
         let countryName = response.data.sys.country;
         currentCity.innerHTML = cityName + ", " + countryName;
@@ -38,6 +41,7 @@ window.onload = function () {
         currentTemp.innerHTML = temperature;
         windSpeed.innerHTML = windSpeedValue + "km/h";
         weatherDescription.innerHTML = weatherDescriptionValue;
+        icon.src = iconUrl;
       })
       .catch(function (error) {
         console.log(error);
