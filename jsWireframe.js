@@ -14,6 +14,12 @@ window.onload = function () {
   let windSpeed = document.querySelector("#windSpeed");
   let weatherDescription = document.querySelector("#weatherDescription");
   let icon = document.querySelector("#icon");
+  let fahrenheitLink = document.querySelector("#changeUnit");
+  fahrenheitLink.addEventListener("click", showFarTemp);
+
+  let celsiusLink = document.querySelector("#changeCel");
+  celsiusLink.addEventListener("click", showCelTemp);
+
   function cityDisplay(event) {
     event.preventDefault();
 
@@ -50,15 +56,30 @@ window.onload = function () {
   let button = document.querySelector("#search");
   button.addEventListener("click", cityDisplay);
 
-  let fahrenheitLink = document.querySelector("#changeUnit");
-  fahrenheitLink.addEventListener("click", showFarTemp);
-
   let currentLocationButton = document.querySelector("#currentLocation");
   currentLocationButton.addEventListener("click", getPosition);
 
   inputCity.addEventListener("keypress", (event) => {
     if (event.keyCode == 13) button.click();
   });
+
+  function showFarTemp(event) {
+    event.preventDefault();
+    let currentTemp = document.querySelector("#currentTemp");
+    // let temperatureElement = document.querySelector("#");
+    let changeUnit = Math.round((currentTemp.innerHTML * 9) / 5 + 32);
+    currentTemp.innerHTML = changeUnit;
+    console.log(fahrenheitLink);
+    fahrenheitLink.classList.add("isDisabled");
+    celsiusLink.classList.remove("isDisabled");
+  }
+  function showCelTemp(event) {
+    let currentTemp = document.querySelector("#currentTemp");
+    let changeCel = Math.round(((currentTemp.innerHTML - 32) * 5) / 9);
+    currentTemp.innerHTML = changeCel;
+    fahrenheitLink.classList.remove("isDisabled");
+    celsiusLink.classList.add("isDisabled");
+  }
 };
 
 function getPosition() {
@@ -78,18 +99,8 @@ function currentCityDisplay(position) {
     .then(function (response) {
       let temperature = Math.round(response.data.main.temp);
       let cityName = response.data.name;
-
       let countryName = response.data.sys.country;
       currentCity.innerHTML = cityName + ", " + countryName;
-
       currentTemp.innerHTML = temperature;
     });
-}
-
-function showFarTemp(event) {
-  event.preventDefault();
-  let currentTemp = document.querySelector("#currentTemp");
-  // let temperatureElement = document.querySelector("#");
-  let changeUnit = Math.round((currentTemp.innerHTML * 9) / 5 + 32);
-  currentTemp.innerHTML = changeUnit;
 }

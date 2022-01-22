@@ -139,3 +139,10 @@ span.units {
 ul {
   list-style-type: none;
 }
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
