@@ -25,7 +25,7 @@
        <div class="container">
         <div class="row topGrid">
           <div class="col-4">
-                        <h1 class="col-4 cityDisplay" id="currentCity">Bern, Switzerland</h1>
+                        <h1 class = "cityDisplay" id="currentCity">Bern, Switzerland</h1>
           </div>
           <div class="col-3">
             <h1 class="currentTemp">
@@ -41,7 +41,7 @@
               <ul class="details align-items-center">
               <li id=weatherDescription> Mostly Cloudy </li>
               <li>Wind Speed <span id="windSpeed"></span></li>
-              <li>High 3<span id="smallUnits">°C</span> | -2<span class="smallUnits">°C</span> Low</li>
+              <li>High <span id="highTemp"> 3°C</span> | Low <span id="lowTemp"> -2°C</span> </li>
               </ul>
             </h3>
           </div>
@@ -58,46 +58,44 @@
     <div class="weekforecast"> 
         <div class="row">
           <div class="col">
-            <div>Monday!
-<i class="fas fa-cloud"></i>
-                <p>3/1</p>
+            <div><span id="oneDay"> Monday </span> <img id="oneIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
+                <span id="oneForecast"><p>3/1</p></span>
                 
             </div>
           </div>
           <div class="col">
-            <div>Tuesday
-                <i class="fas fa-wind"></i> 
-                <p>4/2</p>
+            <div><span id="twoDay"> Tuesday </span>
+                <img id="twoIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
+                <span id="twoForecast"><p>4/2</p></span>
         
             </div>
           </div>
           <div class="col">
-            <div>Wednesday
-                <i class="fas fa-sun"></i>
-                <p>6/2</p>
+            <div><span id="threeDay"> Wednesday </span>
+                <img id="threeIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
+                <span id="threeForecast"><p>6/2</p></span>
             </div>
           </div>
           <div class="col">
-            <div>Thursday
-                <i class="fas fa-temperature-low"></i>
-                <p>1/-1</p>
+            <div><span id="fourDay"> Thursday</span>
+                <img id="fourIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
+                <span id="fourForecast"><p>1/-1</p> </span>
             </div> </div>
             <div class="col">
-            <div>Friday
+            <div><span id="fiveDay">Friday</span>
             </br>
-                <i class="far fa-snowflake"></i>
-                <p>2/1</p>
+                <img id="fiveIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
+                <span id="fiveForecast"><p>2/1</p></span>
             </div>
           </div>
           <div class="col">
-            <div>Saturday
-                <i class="far fa-snowflake"></i>
-                <p>3/-1</p>
+            <div><span id="sixDay">Saturday</span>
+                <img id="sixIcon" src="http://openweathermap.org/img/wn/10d@2x.png">
+                <span id="sixForecast"><p>/-1</p></span>
             </div>
           </div>
     </div>
     </div>
-</br>
 
 
 <div>
@@ -118,6 +116,12 @@
             </div>
           </div>
         </br>
-        <a href="https://github.com/Sarrs13/Weather-app-original"> Github link</a>
+       
   </body>
+</br>
+</br>
+</br>
+<a id = "githubLink" href="https://github.com/Sarrs13/Weather-app-original"> Coded by Sarah Gelinas</a>
 </html>
+
+

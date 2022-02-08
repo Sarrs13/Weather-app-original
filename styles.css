@@ -27,7 +27,7 @@ body {
   padding-left: 20px;
   position: relative;
   top: 50px;
-  left: 50px;
+  left: 100px;
 }
 .row {
   max-width: 800px;
@@ -42,19 +42,20 @@ body {
 }
 .weekforecast {
   display: block;
-  margin: 0 auto;
+  margin: auto;
   margin-top: 5%;
   margin-bottom: 2%;
   background-color: rgba(255, 245, 104, 0.7);
   border: solid 5px #ffd95a;
   border-radius: 150px;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
   box-shadow: rgba(0, 0, 0, 0.603) 0px 10px 8px 0px;
-  width: 800px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  width: 850px;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-bottom: 10px;
 }
 .details {
   display: block;
@@ -104,7 +105,7 @@ button#currentLocation {
   color: #fff;
   border: 2px #ffd95a;
 }
-button.currentLocation:hover {
+button#currentLocation:hover {
   background-color: #fff;
   border: 2px #ffd95a;
   color: #ffd95a;
@@ -114,14 +115,18 @@ h1.cityDisplay,
 h1.currentTemp {
   font-weight: bolder;
   font-size: 40px;
+  text-align: center;
 }
 h1.currentTemp {
   font-size: 50px;
 }
 #icon {
   position: relative;
-  font-size: 50px;
-  padding: 0px;
+  font-size: 20px;
+}
+h1.currentCity {
+  text-align: center;
+  width: "100%";
 }
 
 span.units {
@@ -145,4 +150,9 @@ ul {
   opacity: 0.5;
   text-decoration: none;
   pointer-events: none;
+}
+
+#githubLink {
+  text-align: center;
+  display: block;
 }
